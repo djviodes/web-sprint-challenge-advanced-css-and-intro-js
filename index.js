@@ -279,9 +279,9 @@ function addArtist(id, name, years, genre, nationality, bio){
     return artists.push({id: id, name: name, years: years, genre: genre, nationality: nationality, bio: bio})
   }
 
-  console.log(addArtist(20, "David Viodes", "1996 - Present", "Web Design", "Mixed Boy", "David James Calvin-Viodes (Mixed Boy: [dAvid jAmes calvin vEEOdes]; 25 June 1996 - Present Day) is a young man just trying to figure his way out in this topsy turvy place called home. He is also a student at Lambda."));
+  // console.log(addArtist(20, "David Viodes", "1996 - Present", "Web Design", "Mixed Boy", "David James Calvin-Viodes (Mixed Boy: [dAvid jAmes calvin vEEOdes]; 25 June 1996 - Present Day) is a young man just trying to figure his way out in this topsy turvy place called home. He is also a student at Lambda."));
 
-  console.log(artists);
+  // console.log(artists);
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -292,11 +292,15 @@ and returns an array with names of artists who painted more than 100 paintings.
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
 function lotsOfArt(arr){
-
-
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i].paintings > 100){
+      console.log(arr[i].name);
+    }
+  }
+  return arr.name;
 }
 
-
+// console.log(lotsOfArt(artists));
 
 // 🎨🎨 STRETCH 🎨🎨//
 
