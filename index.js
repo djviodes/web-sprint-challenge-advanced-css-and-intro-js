@@ -279,11 +279,11 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(id, name, years, genre, nationality, bio){
-    return artists.push({id: id, name: name, years: years, genre: genre, nationality: nationality, bio: bio})
+function addArtist(id, name, years, genre, nationality, bio, wikipedia, paintings){
+    return artists.push({id: id, name: name, years: years, genre: genre, nationality: nationality, bio: bio, wikipedia: wikipedia, paintings: paintings})
   }
 
-  // console.log(addArtist(20, "David Viodes", "1996 - Present", "Web Design", "Mixed Boy", "David James Calvin-Viodes (Mixed Boy: [dAvid jAmes calvin vEEOdes]; 25 June 1996 - Present Day) is a young man just trying to figure his way out in this topsy turvy place called home. He is also a student at Lambda."));
+  console.log(addArtist(20, "David Viodes", "1996 - Present", "Web Design", "Mixed Boy", "David James Calvin-Viodes (Mixed Boy: [dAvid jAmes calvin vEEOdes]; 25 June 1996 - Present Day) is a young man just trying to figure his way out in this topsy turvy place called home. He is also a student at Lambda.", "https://en.wikipedia.org/wiki/David_James_(footballer,_born_1970)", 107));
 
   // console.log(artists);
 
@@ -296,12 +296,13 @@ and returns an array with names of artists who painted more than 100 paintings.
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
 function lotsOfArt(arr){
+  const lotsOfPaint = []
   for(let i = 0; i < arr.length; i++){
     if(arr[i].paintings > 100){
-      console.log(arr[i].name);
+      lotsOfPaint.push(arr[i].name);
     }
   }
-  return arr.name;
+  return lotsOfPaint;
 }
 
 // console.log(lotsOfArt(artists));
